@@ -6,6 +6,9 @@ body {
 	background-repeat: repeat-x;
 }
 
+.rooms table td {
+	border-right: thin solid gray;
+}
 /*.focus-content {
 	margin-top: 40px;
 	float: left;
