@@ -11,7 +11,7 @@ import com.jsaddlercs.vactrac.service.RoomService;
 @RequestMapping("/rooms")
 public class RoomController {
 	private final RoomService roomService;
-
+	
 	public RoomController(RoomService roomService) {
 		this.roomService = roomService;
 	}
@@ -21,4 +21,9 @@ public class RoomController {
 		model.addAttribute("rooms", roomService.getAllRooms());
 		return "rooms";
 	}
+	
+//	@GetMapping("/rooms6")
+//	public String getRoomsOn6th(Model model) { 
+//		model.addAttribute("rooms", roomService.getByStayDate("0906"));
+//	}
 }
