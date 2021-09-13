@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.jsaddlercs.com">
+<head>
+<meta charset="UTF-8"/>
+<title>Saddler Hotels - Rooms</title>
+</head>
+
+<body>
+<div class="focus-content">
+	<h2>Available Rooms to Choose From</h2>
+	<table>
+		<tr>
+			<th>Room Id</th>
+			<th>Room Name</th>
+			<th>Bed Info</th>
+			<th>Nights</th>
+			<th>Room Cost</th>
+			<th>Link to More Information</th>
+		</tr>
+		<tr th:each="room:${rooms}">
+			<td th:text="${room.id}">Room Id</td>
+			<td th:text="${room.name}">Name</td>
+			<td th:text="${room.bedInfo}">Bed Info</td>
+			<td th:text="${room.nights}">Nights</td>
+			<td th:text="${room.cost}">Cost</td>
+			<td><a th:href="${room.hyperlink} ?: '#'">Link</a></td>
+		</tr>
+	</table>
+	<h3>End model tables</h3>
+</div>
+</body>
+</html>

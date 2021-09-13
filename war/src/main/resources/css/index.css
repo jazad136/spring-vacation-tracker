@@ -1,0 +1,26 @@
+/* CSS document */
+body { 
+	font-family: "Courier New", "Courier", monospace;
+	background-color: #80ffff;
+	background-image: url("../images/Mattress-Background.png");
+	background-repeat: repeat-x;
+}
+
+.rooms table td {
+	border-right: thin solid gray;
+}
+/*.focus-content {
+	margin-top: 40px;
+	float: left;
+	width:100%;
+}
+.center-content {	
+	float: left;
+	width: 75%;
+}
+.left, .right {
+	border: thin solid black;
+	float: left;
+	width:8%;
+	min-height: 100px;
+}*/
