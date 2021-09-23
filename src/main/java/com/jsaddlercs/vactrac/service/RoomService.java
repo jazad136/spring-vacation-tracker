@@ -36,5 +36,11 @@ public class RoomService {
 	public List<Room> getAllRooms() { 
 		return roomRepository.findAll();
 	}
-	
+	public List<Room> getSuites() { 
+		return roomRepository.findByBedInfoLike("%S");
+	}
+
+	public List<Room> getRoomsUnder100() {
+		return roomRepository.findByCostLessThan(100.00);
+	}
 }
