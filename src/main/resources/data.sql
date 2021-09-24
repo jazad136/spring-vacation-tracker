@@ -28,3 +28,10 @@ INSERT INTO ROOM (NAME, BED_INFO, NIGHTS, COST, DATE_OF_STAY, HYPERLINK) values 
 'https://www.ihg.com/hotels/us/en/find-hotels/hotel/rooms?qDest=Mackinaw%20City,%20MI,%20United%20States&qCiMy=82021&qCiD=13&qCoMy=82021&qCoD=15&qAdlt=3&qChld=0&qRms=1&qRtP=6CBARC&qSlH=MACMI&qAkamaiCC=US&qSrt=sAV&qBrs=re.ic.in.vn.cp.vx.hi.ex.rs.cv.sb.cw.ma.ul.ki.va.ii.sp.nd.ct.sx.we&qAAR=IDARP&qWch=0&qSmP=1&setPMCookies=true&qRad=30&qRdU=mi&srb_u=1&qpMn=1');
 INSERT INTO ROOM (NAME, BED_INFO, NIGHTS, COST, DATE_OF_STAY, HYPERLINK) values ('Baymont Mackinaw City','2Q', 2, 159.00,'0913',
 'https://www.wyndhamhotels.com/baymont/mackinaw-city-michigan/baymont-inn-and-suites-mackinaw-city/rooms-rates?brand_id=BU&brandTier=hr&checkInDate=9/13/2021&checkOutDate=9/15/2021&useWRPoints=false&children=0&adults=3&rooms=1&referringBrand=HR&loc=ChIJ1fKeTxr2NU0RIEBbMHs-TXY&sessionId=1629563148');
+
+INSERT INTO ROOM (NAME, BED_INFO, NIGHTS, COST, DATE_OF_STAY) values ('Days Inn Breezewood', '1K', 1, 100.00, '0922')
+INSERT INTO ROOM (NAME, BED_INFO, NIGHTS, COST, DATE_OF_STAY) values ('Days Inn Breezewood', '2D', 1, 100.00, '0922')
+INSERT INTO ROOM (NAME, BED_INFO, NIGHTS, COST, DATE_OF_STAY) values ('Fairfield Inn & Suites Bedford', '2Q', 1, 146.00, '0922')
+INSERT INTO ROOM (NAME, BED_INFO, NIGHTS, COST, DATE_OF_STAY) values ('Courtyard Altoona', '2Q', 1, 112.00, '0922')
+INSERT INTO ROOM (NAME, BED_INFO, NIGHTS, COST, DATE_OF_STAY) values ('Courtyard Altoona', '1KS', 1, 161.00, '0922')
+INSERT INTO ROOM (NAME, BED_INFO, NIGHTS, COST, DATE_OF_STAY) values ('Quality Inn Breeze Manor', '1Q', 1, 132.00, '0922')
