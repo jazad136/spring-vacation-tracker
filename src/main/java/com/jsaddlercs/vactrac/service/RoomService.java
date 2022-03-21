@@ -1,10 +1,13 @@
 package com.jsaddlercs.vactrac.service;
 
+import java.util.ArrayList;
 import java.util.List;
 
+import javax.sql.DataSource;
+
+import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Service;
 
-import com.jsaddlercs.vactrac.data.RoomRepository;
 import com.jsaddlercs.vactrac.model.Room;
 
 @Service
@@ -27,14 +30,14 @@ public class RoomService {
 //    public List<Room> getAllRooms(){
 //        return rooms;
 //    }
-	private final RoomRepository roomRepository;
+	private final JdbcTemplate jdbcTemplate;
 
-	public RoomService(RoomRepository roomRepository) {
-		this.roomRepository = roomRepository;
+	public RoomService(DataSource dataSource) {
+		this.jdbcTemplate = new JdbcTemplate(dataSource);
 	}
 
 	public List<Room> getAllRooms() { 
-		return roomRepository.findAll();
+		return new ArrayList<>();
 	}
 	
 }

@@ -1,33 +1,16 @@
 package com.jsaddlercs.vactrac.model;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.Table;
-
-@Entity
-@Table(name="ROOM")
 public class Room {
-	@Id
-	@Column(name="ROOM_ID")
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private long id;
 	
-	@Column(name="NAME")
 	private String name;
 	
-	@Column(name="BED_INFO")
 	private String bedInfo;
 	
-	@Column(name="NIGHTS")
 	private int nights;
 	
-	@Column(name="COST")
 	private double cost;
 	
-	@Column(name="DATE_OF_STAY")
 	private String dateOfStay;
 	
 	public Room() {
