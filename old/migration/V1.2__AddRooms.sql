@@ -1,0 +1,6 @@
+--INSERT INTO ROOM (NAME VARCHAR(16), BED_INFO CHAR(2), NIGHTS INTEGER(10), COST DECIMAL(19,4)) values ('Baymont Mackinaw City','159.00', 2, 159.00);
+INSERT INTO ROOM (NAME, BED_INFO, NIGHTS, COST, DATE_OF_STAY) values ('Baymont Mackinaw City','2Q', 2, 159.00,'0830');
+INSERT INTO ROOM (NAME, BED_INFO, NIGHTS, COST, DATE_OF_STAY) values ('Comfort Inn Lakeside', '2Q', 2, 125.00, '0906');
+INSERT INTO ROOM (NAME, BED_INFO, NIGHTS, COST, DATE_OF_STAY) values ('Clarion Hotel Beachfront','2Q', 2, 94.00, '0906');
+INSERT INTO ROOM (NAME, BED_INFO, NIGHTS, COST, DATE_OF_STAY) values ('Best Western Plus Dockside', '2Q', 2, 269.00, '0906');
+INSERT INTO ROOM (NAME, BED_INFO, NIGHTS, COST, DATE_OF_STAY) values ('Holiday Inn Express Mackinaw', '2Q', 2, 156.40, '0906');
