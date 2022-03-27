@@ -1,4 +1,4 @@
-CREATE TABLE ROOM(
+CREATE TABLE room(
   ROOM_ID BIGSERIAL PRIMARY KEY,
   NAME varchar(40),
   BED_INFO char(2),
@@ -7,7 +7,7 @@ CREATE TABLE ROOM(
   DATE_OF_STAY varchar(4)
 );
 
-CREATE TABLE HOTEL(
+CREATE TABLE hotel(
   NAME varchar(16),
   CONTACT_NUM varchar(10)
 );
