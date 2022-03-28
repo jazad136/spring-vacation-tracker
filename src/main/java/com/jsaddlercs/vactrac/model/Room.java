@@ -1,27 +1,22 @@
 package com.jsaddlercs.vactrac.model;
 
 public class Room {
-	private long id;
 	
+	private Long id;
 	private String name;
-	
 	private String bedInfo;
-	
-	private int nights;
-	
-	private double cost;
-	
-	private String dateOfStay;
+	private Integer nights;
+	private String stayStart;
 	
 	public Room() {
+		
 	}
 	
-	public Room(String name, String bedInfo, int nights, double cost, String dateOfStay) {
+	public Room(String name, String bedInfo, Integer nights, String stayStart) {
 		this.name = name;
 		this.bedInfo = bedInfo;
 		this.nights = nights;
-		this.cost = cost;
-		this.dateOfStay = dateOfStay;
+		this.stayStart = stayStart;
 	}
 
 	public long getId() { return id; }
@@ -36,10 +31,7 @@ public class Room {
 	public int getNights() { return nights; }
 	public void setNights(int nights) { this.nights = nights; }
 	
-	public double getCost() { return cost; }
-	public void setCost(double cost) { this.cost = cost; }
-	
-	public String getDateOfStay() { return dateOfStay; }
-	public void setDateOfStay(String dateOfStay) { this.dateOfStay = dateOfStay; }
+	public String getStayStart() { return stayStart; }
+	public void setStayStart(String dateOfStay) { this.stayStart = dateOfStay; }
 	
 }
