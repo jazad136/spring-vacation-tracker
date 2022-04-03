@@ -23,6 +23,14 @@ INSERT INTO cost (name, bed_info, stay_start, price, retrieved_date) values ('Cl
 INSERT INTO cost (name, bed_info, stay_start, price, retrieved_date) values ('Holiday Inn Express Lilitz', '2Q'   ,'0238',120.65, '2022-03-23 00:00:00');
 INSERT INTO cost (name, bed_info, stay_start, price, retrieved_date) values ('Holiday Inn Express Strasburg','2Q' ,'0404',118.85, '2022-03-23 00:00:00');
 INSERT INTO cost (name, bed_info, stay_start, price, retrieved_date) values ('Fairfield Inn Branson', '2Q'        ,'0404',131.00, '2022-03-25 00:00:00');
+
 -- GAS
 INSERT INTO cost (name, street, price, retrieved_date) values('Marathon Gas Station', '2800 Corunna Rd', 4.09, '2022-03-27 00:00:00');
 INSERT INTO cost (name, street, price, retrieved_date) values('Speedway Gas Station', '3155 Miller Rd' , 4.14, '2022-03-27 00:00:00');
+-- back to hotels
+
+INSERT INTO cost (name, bed_info, stay_start, price, retrieved_date) values ('Comfort Inn Convention Center','2Q' ,'0411',107.00, '2022-04-01 00:00:00');
+INSERT INTO cost (name, bed_info, stay_start, price, retrieved_date) values ('Comfort Inn Convention Center','1K' ,'0411',86.00 , '2022-04-01 00:00:00');
+INSERT INTO cost (name, bed_info, stay_start, price, retrieved_date) values ('Comfort Inn Convention Center','1KS','0411',140.00, '2022-04-01 00:00:00');
+INSERT INTO cost (name, bed_info, stay_start, price, retrieved_date) values ('Comfort Suites Lombard'  ,'2QS'     ,'0411',107.00, '2022-04-01 00:00:00');
+INSERT INTO cost (name, bed_info, stay_start, price, retrieved_date) values ('Comfort Suites Lombard'  ,'1KS'     ,'0411',107.00, '2022-04-01 00:00:00');
