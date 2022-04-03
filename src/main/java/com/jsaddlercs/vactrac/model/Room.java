@@ -34,4 +34,14 @@ public class Room {
 	public String getStayStart() { return stayStart; }
 	public void setStayStart(String dateOfStay) { this.stayStart = dateOfStay; }
 	
+	@Override
+	public String toString() {
+		return "Room [" 
+				+ (id != null ? "id=" + id + ", " : "") 
+				+ (name != null ? "name=" + name + ", " : "")
+				+ (bedInfo != null ? "bedInfo=" + bedInfo + ", " : "")
+				+ (nights != null ? "nights=" + nights + ", " : "")
+				+ (stayStart != null ? "stayStart=" + stayStart : "") + "]";
+	}
+	
 }
