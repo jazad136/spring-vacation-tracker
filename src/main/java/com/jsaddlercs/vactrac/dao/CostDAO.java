@@ -45,22 +45,23 @@ public class CostDAO {
 		List<RoomCost> roomCostList = new ArrayList<>();
 		SqlRowSet rs = jdbcTemplate.queryForRowSet(GET_ALL_ROOM_COST);
 		RoomCost c = null;
-		long orderId = 0;
+		long roomId = -1;
 		while(rs.next()) { 
-			long localOrderId = rs.getLong(idxLngRoomId);
-			if(localOrderId != orderId) { 
+			long localRoomId = rs.getLong(idxLngRoomId);
+			if(localRoomId != roomId) { 
 				c = new RoomCost();
-				c.setRoomId(rs.getLong     (idxLngRoomId));
-				c.setName(rs.getString     (idxStrName));
-				c.setBedInfo(rs.getString  (idxStrBedInfo));
-				orderId = localOrderId;
+				c.setRoomId(localRoomId);
+				c.setName(rs.getString(idxStrName));
+				c.setBedInfo(rs.getString(idxStrBedInfo));
+				roomId = localRoomId;
+				c.setCostLines(new ArrayList<>());
 			}
 			CostLine cl = new CostLine();
 			cl.setNights(rs.getInt(idxIntNights));
 			cl.setStayStart(rs.getString(idxStrStayStart));
 			cl.setPrice(new BigDecimal(rs.getDouble(idxDblPrice)));
 			cl.setRetrievedDate(new Date(rs.getDate(idxDatRetrievedDate).getTime()));
-			roomCostList.add(c);
+			c.getCostLines().add(cl);
 		}
 		return roomCostList;
 	}
