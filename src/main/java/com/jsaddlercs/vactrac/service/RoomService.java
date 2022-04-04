@@ -27,5 +27,12 @@ public class RoomService {
 	public List<RoomCost> getAllRoomsWCosts() { 
 		return costDAO.getAllRoomsWCosts();
 	}
+
+	public RoomCost getRoomCostInfo(long roomId) { 
+		return costDAO.findById(roomId);
+	}
+	public RoomCost addNewCost(long roomId, double price) {
+		return costDAO.createRoomCost(roomId, price);
+	}
 	
 }

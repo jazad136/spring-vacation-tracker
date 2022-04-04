@@ -3,6 +3,8 @@ package com.jsaddlercs.vactrac.model;
 import java.math.BigDecimal;
 import java.util.Date;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
+
 /** 
  * Source code for Cost. 
  */
