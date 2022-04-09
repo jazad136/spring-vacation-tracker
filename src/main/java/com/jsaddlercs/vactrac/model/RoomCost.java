@@ -29,7 +29,7 @@ public class RoomCost {
 	@Override
 	public String toString() {
 		if(costLines == null) 
-			return "RoomCost [roomId=" + roomId + ", name=" + name + ", bedInfo=" + bedInfo + "]";
+			return "RoomCost [roomId=" + roomId + ", name=" + name + ", bedInfo=" + bedInfo + ", costLine=(none)]";
 		
 		return costLines.stream()
 			.map(cl -> "RoomCost [roomId=" + roomId + ", name=" + name + "bedInfo=" + bedInfo + ", costLine=" + cl + "]")

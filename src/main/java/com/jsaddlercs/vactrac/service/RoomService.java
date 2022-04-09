@@ -31,6 +31,10 @@ public class RoomService {
 	public RoomCost getRoomCostInfo(long roomId) { 
 		return costDAO.findById(roomId);
 	}
+	
+	public Room getRoomInfo(long roomId) { 
+		return roomsDAO.findById(roomId);
+	}
 	public RoomCost addNewCost(long roomId, double price) {
 		return costDAO.createRoomCost(roomId, price);
 	}

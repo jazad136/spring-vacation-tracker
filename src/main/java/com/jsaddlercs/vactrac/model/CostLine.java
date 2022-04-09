@@ -1,6 +1,8 @@
 package com.jsaddlercs.vactrac.model;
 
 import java.math.BigDecimal;
+import java.math.RoundingMode;
+import java.text.DecimalFormat;
 import java.util.Date;
 
 /** 
@@ -12,7 +14,13 @@ public class CostLine {
 	private BigDecimal price;
 	private Date retrievedDate;
 	
-	public CostLine() { }
+	private final DecimalFormat priceFormat;
+	public CostLine() { 
+		priceFormat = (DecimalFormat)DecimalFormat.getInstance();
+		priceFormat.setMinimumFractionDigits(2);
+		priceFormat.setMaximumFractionDigits(2);
+		priceFormat.setRoundingMode(RoundingMode.HALF_EVEN);
+	}
 	
 	
 	public Integer getNights() { return nights; }
@@ -21,7 +29,9 @@ public class CostLine {
 	public String getStayStart() { return stayStart; }
 	public void setStayStart(String stayStart) { this.stayStart = stayStart; }
 
-	public BigDecimal getPrice() { return price; }
+//	public String getPrice() { return priceFormat.format(price); }
+	public String getPrice() { return price.toString(); }
+	
 	public void setPrice(BigDecimal price) { this.price = price; }
 
 	public Date getRetrievedDate() { return retrievedDate; }

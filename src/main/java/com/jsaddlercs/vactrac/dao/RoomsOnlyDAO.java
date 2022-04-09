@@ -1,20 +1,28 @@
 package com.jsaddlercs.vactrac.dao;
 
+import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
 import org.springframework.jdbc.core.JdbcTemplate;
+import org.springframework.jdbc.core.ResultSetExtractor;
+import org.springframework.jdbc.core.RowMapper;
 import org.springframework.jdbc.support.rowset.SqlRowSet;
 import org.springframework.stereotype.Component;
 import org.springframework.web.bind.annotation.GetMapping;
 
 import com.jsaddlercs.vactrac.model.Room;
+import com.jsaddlercs.vactrac.model.RoomCost;
 
 @Component
 public class RoomsOnlyDAO {
 
 	public JdbcTemplate jdbcTemplate;
 	private final String GET_ALL_ROOM = "SELECT room_id, name, bed_info, nights, stay_start FROM room;";
+	
+	private final String GET_ONE = 
+			"SELECT room_id, name, bed_info, nights, stay_start FROM room WHERE room_id = ?;";
 
 	/* sample output
 	 (1)                   (2)                 (3)        (4)      (5) 
@@ -33,6 +41,8 @@ public class RoomsOnlyDAO {
 	private static int idxIntNights = 4;
 	private static int idxStrStayStart = 5;
 	
+
+
 	public List<Room> getAllRooms() { 
 		List<Room> roomList = new ArrayList<>();
 		SqlRowSet rs = jdbcTemplate.queryForRowSet(GET_ALL_ROOM);
@@ -72,5 +82,21 @@ public class RoomsOnlyDAO {
 		return roomList;
 	}
 
+	private static class RoomMapper implements RowMapper<Room> {
+		@Override
+		public Room mapRow(ResultSet rs, int rowNum) throws SQLException {
+			Room r = new Room();
+			r.setId(rs.getLong(idxLngRoomId));
+			r.setName(rs.getString(idxStrName));
+			r.setBedInfo(rs.getString(idxStrBedInfo));
+			r.setNights(rs.getInt(idxIntNights));
+			r.setStayStart(rs.getString(idxStrStayStart));
+			return r;
+		}
+		
+	}
 	
+	public Room findById(long id) { 
+		return jdbcTemplate.queryForObject(GET_ONE, new RoomMapper(), id);
+	}
 }

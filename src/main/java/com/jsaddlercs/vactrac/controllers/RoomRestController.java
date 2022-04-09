@@ -30,7 +30,11 @@ public class RoomRestController {
 	
 	@CrossOrigin
 	@GetMapping(path="/wcosts/{id}") 
-	public RoomCost getRoom(@PathVariable Long id) {  return roomService.getRoomCostInfo(id); }
+	public RoomCost getRoomWCost(@PathVariable Long id) {  return roomService.getRoomCostInfo(id); }
+	
+	@CrossOrigin
+	@GetMapping(path="/{id}") 
+	public Room getRoom(@PathVariable Long id) {  return roomService.getRoomInfo(id); }
 	
 	@CrossOrigin
 	@GetMapping(path="/new")
