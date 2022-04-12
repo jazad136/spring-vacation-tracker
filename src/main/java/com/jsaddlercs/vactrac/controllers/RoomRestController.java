@@ -1,5 +1,6 @@
 package com.jsaddlercs.vactrac.controllers;
 
+import java.math.BigDecimal;
 import java.util.List;
 
 import org.springframework.web.bind.annotation.CrossOrigin;
@@ -9,8 +10,10 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.jsaddlercs.vactrac.model.CostLine;
 import com.jsaddlercs.vactrac.model.Room;
 import com.jsaddlercs.vactrac.model.RoomCost;
+import com.jsaddlercs.vactrac.model.StayPrice;
 import com.jsaddlercs.vactrac.service.RoomService;
 
 @RestController
@@ -41,4 +44,14 @@ public class RoomRestController {
 	public RoomCost addNewCost(@RequestParam Long roomId, @RequestParam Double price) { 
 		return roomService.addNewCost(roomId, price);
 	}
+	
+	@CrossOrigin
+	@GetMapping(path="/stayPrice") 
+	public StayPrice getTotalStayPrice(@RequestParam Long roomId, @RequestParam Integer costLineNum) { 
+		RoomCost costInfo = roomService.getRoomCostInfo(roomId);
+		CostLine costLine = costInfo.getCostLines().get(costLineNum-1);
+		BigDecimal returnVal = roomService.calculateTotalStayPrice(costLine);
+		return new StayPrice(costLine.costLinePriceFormat().format(returnVal));
+	}
+	
 }

@@ -22,7 +22,7 @@ public class CostLine {
 		priceFormat.setRoundingMode(RoundingMode.HALF_EVEN);
 	}
 	
-	
+	public DecimalFormat costLinePriceFormat() { return priceFormat; } 
 	public Integer getNights() { return nights; }
 	public void setNights(Integer nights) { this.nights = nights; }
 	

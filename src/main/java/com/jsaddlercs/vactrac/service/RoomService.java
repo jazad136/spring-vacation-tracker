@@ -41,7 +41,7 @@ public class RoomService {
 		return costDAO.createRoomCost(roomId, price);
 	}
 	
-	public BigDecimal calculatePricePerNight(CostLine costLine) { 
+	public BigDecimal calculateTotalStayPrice(CostLine costLine) { 
 		BigDecimal cpl1 = costLine.getPriceDecimal();
 		int nights = costLine.getNights();
 		BigDecimal bigPrice = cpl1.multiply(new BigDecimal(nights));
