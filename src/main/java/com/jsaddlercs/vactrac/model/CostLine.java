@@ -29,11 +29,11 @@ public class CostLine {
 	public String getStayStart() { return stayStart; }
 	public void setStayStart(String stayStart) { this.stayStart = stayStart; }
 
-//	public String getPrice() { return priceFormat.format(price); }
-	public String getPrice() { return price.toString(); }
-	
+	public String getPrice() { return priceFormat.format(price); }
+//	public String getPrice() { return price.toString(); }
+	public BigDecimal getPriceDecimal() { return price; } 
 	public void setPrice(BigDecimal price) { this.price = price; }
-
+	
 	public Date getRetrievedDate() { return retrievedDate; }
 	public void setRetrievedDate(Date retrievedDate) { this.retrievedDate = retrievedDate; }
 
