@@ -20,7 +20,7 @@ INSERT INTO cost (name, bed_info, stay_start, price, retrieved_date) values ('Cl
 INSERT INTO cost (name, bed_info, stay_start, price, retrieved_date) values ('Clarion Inn Strasburg', '1KS'       ,'0418',98.00 , '2022-03-21 00:00:00');
 INSERT INTO cost (name, bed_info, stay_start, price, retrieved_date) values ('Clarion Inn Strasburg', '2Q'        ,'0404',78.00 , '2022-03-23 00:00:00');
 -- end of 03-21 updates
-INSERT INTO cost (name, bed_info, stay_start, price, retrieved_date) values ('Holiday Inn Express Lilitz', '2Q'   ,'0238',120.65, '2022-03-23 00:00:00');
+INSERT INTO cost (name, bed_info, stay_start, price, retrieved_date) values ('Holiday Inn Express Lilitz', '2Q'   ,'0328',120.65, '2022-03-23 00:00:00');
 INSERT INTO cost (name, bed_info, stay_start, price, retrieved_date) values ('Holiday Inn Express Strasburg','2Q' ,'0404',118.85, '2022-03-23 00:00:00');
 INSERT INTO cost (name, bed_info, stay_start, price, retrieved_date) values ('Fairfield Inn Branson', '2Q'        ,'0404',131.00, '2022-03-25 00:00:00');
 
